@@ -1,0 +1,162 @@
+body {
+    font-size: 18pt;
+ background: linear-gradient(to bottom, #ff9933 33%, white 30%, white 66%, #138808 59%);
+    
+}
+.title{
+   background-color: #DD4BFF;
+   color:#7378F1;
+   font-size: 3em;
+   border-top: 3px solid #E07DF7;
+   border-left: 4px solid #CB86DB;
+   border-right: 2px solid #821E9A;
+   border-bottom: 1mm solid #9222AC;
+   width: 410px;
+   height: 55px;
+ }
+
+  #figcap {
+    /* Flexbox properties for layout */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    color: white;
+    height: 40px;
+    position: fixed;
+    width: 100%;
+    top: 1px;
+    z-index: 1000;
+    transition: background-position 0.3s ease-in-out;
+    
+    overflow: hidden; /* Hide overflow */
+}
+
+#figcap:hover {
+    /* Increase the height to reveal the hidden text */
+    height: 140px;
+    /* Indian flag background image */
+    background-image: linear-gradient(to bottom, #ff9933 33%, white 33%, white 66%, #138808 66%);
+    background-size: 100% 300%;
+    background-position: 0% 100%;
+    animation: colorChange 3s infinite;
+    overflow: hidden;
+}
+
+#flag {
+    /* Add position and size for the flag */
+    position: absolute;
+    top: -50px; /* Position the flag above the text */
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-image: linear-gradient(to bottom, #ff9933 33%, white 33%, white 66%, #138808 66%);
+    background-size: 100% 300%;
+    background-position: 0% 100%;
+    overflow: hidden;
+}
+
+@keyframes colorChange {
+    0%, 100% {
+        background-position: 0% 100%;
+        overflow: hidden;
+    }
+    50% {
+        background-position: 0% 0%;
+        overflow: hidden;
+    }
+}
+.click {
+    font-size: 24px;
+    font-weight: bold;
+    -webkit-background-clip: transparent; /* For Safari */
+    color: transparent;
+    background-image: linear-gradient(to right, #ff9933, #ffffff 33%, #138808 66%);
+   
+}
+
+.click:hover {
+    color: transparent;
+    background-image: none;
+}
+ 
+        /* Add some basic styling */
+        .image-container {
+            display: inline-block;
+            width: 500px;
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+
+        /* Define animations */
+        @keyframes animation1 {
+            from { opacity: 1; transform: scale(1); }
+            to { opacity: 0; transform: scale(1.2); }
+        }
+
+        @keyframes animation2 {
+            from { opacity: 1; transform: translateX(0); }
+            to { opacity: 0; transform: translateX(-100%); }
+        }
+
+        @keyframes animation3 {
+            from { opacity: 1; transform: translateY(0); }
+            to { opacity: 0; transform: translateY(100%); }
+        }
+
+        @keyframes animation4 {
+            from { opacity: 1; transform: rotate(0); }
+            to { opacity: 0; transform: rotate(360deg); }
+        }
+
+        @keyframes animation5 {
+            from { opacity: 1; transform: scale(1); }
+            to { opacity: 0; transform: scale(0.5); }
+        }
+
+        @keyframes animation6 {
+            from { opacity: 1; transform: scaleX(1); }
+            to { opacity: 0; transform: scaleX(0); }
+        }
+
+        @keyframes animation7 {
+            from { opacity: 1; transform: scaleY(1); }
+            to { opacity: 0; transform: scaleY(0); }
+        }
+
+        .image-container:hover img:nth-child(1) {
+            animation: animation1 6s forwards;
+        }
+
+        .image-container:hover img:nth-child(2) {
+            animation: animation2 6s forwards;
+        }
+
+        .image-container:hover img:nth-child(3) {
+            animation: animation3 6s forwards;
+        }
+
+        .image-container:hover img:nth-child(4) {
+            animation: animation4 6s forwards;
+        }
+
+        .image-container:hover img:nth-child(5) {
+            animation: animation5 6s forwards;
+        }
+
+        .image-container:hover img:nth-child(6) {
+            animation: animation6 6s forwards;
+        }
+
+        .image-container:hover img:nth-child(7) {
+            animation: animation7 6s forwards;
+        }
+   
